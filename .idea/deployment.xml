@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="NCI">
+        <serverdata>
+          <mappings>
+            <mapping deploy="vssd" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/classification/exclude" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="debug server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/hfai/msvmamba" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="li@172.23.110.237:23400 password">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="li@172.23.110.237:23400 password (2)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="li@172.23.59.37:23400 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/li/yh/hfai/msvmamba/" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="li@172.23.59.37:23400 password (2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/li/yh/hfai/msvmamba" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="li@172.23.59.37:23400 password (3)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="li@172.23.59.37:23400 password (4)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/li/yh/hfai/msvmamba" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@connect.westc.gpuhub.com:44450 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/vssd" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

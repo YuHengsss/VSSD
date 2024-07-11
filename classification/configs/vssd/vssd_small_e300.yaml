@@ -1,0 +1,22 @@
+MODEL:
+  TYPE: vmamba2
+  NAME: vssd_small_e300
+  DROP_PATH_RATE: 0.4
+  VMAMBA2:
+    EMBED_DIM: 64
+    DEPTHS: [ 3, 4, 21, 5]
+    NUM_HEADS: [2, 4, 8, 16]
+    SIMPLE_DOWNSAMPLE: False
+    SIMPLE_PATCH_EMBED: False
+    SSD_EXPANSION: 2
+    SSD_CHUNK_SIZE: 256
+    LINEAR_ATTN_DUALITY: True
+    SSD_POSITIVE_DA: True
+    ATTN_TYPES: ['mamba2', 'mamba2', 'mamba2', 'standard']
+
+  DDP: 'torch'
+TRAIN:
+  EPOCHS: 300
+  WARMUP_EPOCHS: 20
+
+#40.01M 7.37G

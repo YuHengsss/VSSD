@@ -1,0 +1,17 @@
+torch
+torchvision
+torchaudio
+packaging
+triton
+timm==0.4.12
+pytest 
+chardet 
+yacs 
+termcolor
+submitit 
+tensorboardX
+fvcore
+seaborn
+opencv-python
+tensorboard
+mamba-ssm==2.0.4
