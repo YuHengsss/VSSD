@@ -51,7 +51,6 @@ For more information, please refer to our [paper]
 
 
 ## Getting Started
-The steps to create env, train and evaluate VSSD models are followed by the same steps as VMamba.
 
 ### Installation
 
@@ -71,13 +70,18 @@ conda create -n VSSD
 conda activate VSSD
 ```
 
-***Install Dependencies***
+[//]: # (***Install Dependencies***)
 
-```bash
-pip install -r requirements.txt
-cd kernels/selective_scan && pip install .
-```
-<!-- cd kernels/cross_scan && pip install . -->
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (pip install -r requirements.txt)
+
+[//]: # (cd kernels/selective_scan && pip install .)
+
+[//]: # (```)
+
+[//]: # (<!-- cd kernels/cross_scan && pip install . -->)
 
 
 ***Dependencies for `Detection` and `Segmentation` (optional)***
