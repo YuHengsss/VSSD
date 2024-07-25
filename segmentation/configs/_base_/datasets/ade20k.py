@@ -25,14 +25,16 @@ test_pipeline = [
     dict(type='LoadAnnotations', reduce_zero_label=True, backend_args=backend_args),
     dict(type='PackSegInputs')
 ]
-img_ratios = [0.5, 0.75, 1.0, 1.25, 1.5, 1.75]
+img_ratios = [0.75, 1.0, 1.25]#[0.5, 0.75, 1.0, 1.25]#[0.75, 1.0, 1.25]#, 1.25]#[0.5, 0.75, 1.0, 1.25, 1.5, 1.75]
 tta_pipeline = [
     dict(type='LoadImageFromFile', backend_args=backend_args),
     dict(
         type='TestTimeAug',
         transforms=[
             [
-                dict(type='Resize', scale_factor=r, keep_ratio=True)
+                # dict(type='Resize', scale_factor=r, keep_ratio=True)
+                # for r in img_ratios
+                dict(type='Resize', scale=(int(2048*r), int(512*r)), keep_ratio=True)
                 for r in img_ratios
             ],
             [

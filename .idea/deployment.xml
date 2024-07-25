@@ -16,7 +16,7 @@
       <paths name="debug server">
         <serverdata>
           <mappings>
-            <mapping deploy="/hfai/msvmamba" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/hfai/vssd" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
@@ -65,7 +65,7 @@
       <paths name="root@connect.westc.gpuhub.com:44450 password">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/vssd" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/vssd_release" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

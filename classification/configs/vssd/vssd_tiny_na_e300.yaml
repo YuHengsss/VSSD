@@ -11,7 +11,7 @@ MODEL:
     SSD_EXPANSION: 2
     SSD_CHUNK_SIZE: 256
     LINEAR_ATTN_DUALITY: True
-    SSD_POSITIVE_DA: True
+    #SSD_POSITIVE_DA: True
     ATTN_TYPES: ['mamba2', 'mamba2', 'mamba2', 'standard']
 
   DDP: 'torch'

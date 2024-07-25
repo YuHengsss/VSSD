@@ -122,7 +122,7 @@ class Mamba2(nn.Module):
         self.chunk_size = chunk_size#torch.tensor(chunk_size,dtype=torch.int32)
         self.use_mem_eff_path = use_mem_eff_path
         self.layer_idx = layer_idx
-        self.ssd_positve_dA = kwargs.get('ssd_positve_dA', False) #default to False, ablation for linear attn duality
+        self.ssd_positve_dA = kwargs.get('ssd_positve_dA', True) #default to False, ablation for linear attn duality
         # Order: [z, x, B, C, dt]
         d_in_proj = 2 * self.d_inner + 2 * self.ngroups * self.d_state + self.nheads
         self.in_proj = nn.Linear(self.d_model, int(d_in_proj), bias=bias, **factory_kwargs) #
@@ -182,12 +182,6 @@ class Mamba2(nn.Module):
 
         #linear attention duality
         self.linear_attn_duality = linear_attn_duality
-
-        #lepe positional encoding
-        if kwargs.get('lepe', False):
-            self.lepe = nn.Conv2d(self.d_inner, self.d_inner, 3, padding=1, groups=self.d_inner)
-        else:
-            self.lepe = None
         self.kwargs = kwargs
 
     def non_casual_linear_attn(self, x, dt, A, B, C, D, H=None, W=None):
@@ -436,7 +430,7 @@ class VMAMBA2(nn.Module):
                  mlp_ratio=4., qkv_bias=True, drop_rate=0., drop_path_rate=0.2,
                  norm_layer=nn.LayerNorm, use_checkpoint=False,
                  ssd_expansion=2, ssd_ngroups=1, ssd_chunk_size=256,
-                 linear_attn_duality= False, d_state=64, **kwargs):
+                 linear_attn_duality= True, d_state=64, **kwargs):
         super().__init__()
         self.num_classes = num_classes
         self.num_layers = len(depths)
@@ -446,7 +440,7 @@ class VMAMBA2(nn.Module):
 
         self.simple_downsample = kwargs.get('simple_downsample', False)
         self.simple_patch_embed = kwargs.get('simple_patch_embed', False)
-        self.attn_types = kwargs.get('attn_types', ['mamba2']*len(depths))
+        self.attn_types = kwargs.get('attn_types', ['mamba2', 'mamba2', 'mamba2', 'standard'])
         if self.simple_patch_embed:
             self.patch_embed = SimpleStem(img_size=img_size, patch_size=patch_size, in_chans=in_chans, embed_dim=embed_dim)
         else:

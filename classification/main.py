@@ -1,5 +1,5 @@
 # --------------------------------------------------------
-# Modified by $@#Anonymous#@$
+# Modified by Yuheng Shi
 # --------------------------------------------------------
 # Swin Transformer
 # Copyright (c) 2021 Microsoft
@@ -107,6 +107,8 @@ def parse_option():
     parser.add_argument('--ddp', type=str, default='torch', help='distributed data parallel')
     parser.add_argument('--enable_preload', action='store_true', help='tricks to fix the bug of DataLoader')
     parser.add_argument('--enable_persistance', action='store_true', help='tricks to fix the bug of DataLoader')
+    parser.add_argument('--mesa', action='store_true', help='tricks to prevent overfitting, following MLLA')
+    parser.add_argument('--mesa_value', type=float, default=1.0, help='tricks to prevent overfitting, following MLLA')
     args, unparsed = parser.parse_known_args()
 
     config = get_config(args)
@@ -227,7 +229,8 @@ def main(config, args):
         train_one_epoch(config, model, criterion, data_loader_train, optimizer, epoch, mixup_fn, lr_scheduler,
                         loss_scaler, model_ema, steps=steps, max_accuracy=max_accuracy,
                         max_accuracy_ema=max_accuracy_ema,
-                        tb_writer=writer)
+                        tb_writer=writer,
+                        mesa=args.mesa_value if (epoch >= int(0.25 * config.TRAIN.EPOCHS) and args.mesa) else -1.0)
         steps = 0
         if dist.get_rank() == 0:
             save_checkpoint_ema(config, epoch, model_without_ddp, max_accuracy, optimizer, lr_scheduler,
@@ -272,7 +275,7 @@ def main(config, args):
 
 def train_one_epoch(config, model, criterion, data_loader, optimizer, epoch, mixup_fn,
                     lr_scheduler, loss_scaler, model_ema=None, model_time_warmup=50, steps=0,
-                    max_accuracy=0.0, max_accuracy_ema=0.0, tb_writer=None):
+                    max_accuracy=0.0, max_accuracy_ema=0.0, tb_writer=None, mesa=-1):
     model.train()
     optimizer.zero_grad()
 
@@ -300,7 +303,17 @@ def train_one_epoch(config, model, criterion, data_loader, optimizer, epoch, mix
 
         with torch.cuda.amp.autocast(enabled=config.AMP_ENABLE):
             outputs = model(samples)
-        loss = criterion(outputs, targets)
+            if mesa > 0.0:
+                with torch.inference_mode():
+                    ema_output = model_ema.ema(samples).detach()
+                ema_output = torch.clone(ema_output)
+                ema_output = ema_output.softmax(dim=-1).detach()
+                ema_loss = criterion(outputs, ema_output) * mesa
+
+        if mesa > 0.0:
+            loss = criterion(outputs, targets) + ema_loss
+        else:
+            loss = criterion(outputs, targets)
         loss = loss / config.TRAIN.ACCUMULATION_STEPS
 
         # this attribute is added by timm on one optimizer (adahessian)

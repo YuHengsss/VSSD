@@ -16,6 +16,7 @@ logs
 ckpts
 log
 ckpt
+exclude
 
 detection/data
 segmentation/data
