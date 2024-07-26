@@ -2,6 +2,7 @@
 <div align="center">
 <h1>VSSD </h1>
 <h3>VSSD:  Vision Mamba with Non-Casual State Space Duality</h3>
+Paper is coming soon!
 
 [//]: # (Paper: &#40;[arXiv:2405.14174]&#40;https://arxiv.org/abs/2405.14174&#41;&#41;)
 </div>
@@ -12,8 +13,8 @@
 
 ## Introduction
 This repository contains the code for training and evaluating VSSD varints on the ImageNet-1K dataset for image classification, COCO dataset for object detection, and ADE20K dataset for semantic segmentation.
-For more information, please refer to our [paper]
 
+[//]: # (For more information, please refer to our [paper])
 [//]: # (&#40;https://arxiv.org/abs/2405.14174&#41;.)
 
 <p align="center">
