@@ -12,6 +12,9 @@ Paper is coming soon!
 
 
 ## Introduction
+Recently, State Space Duality (SSD), an improved variant of SSMs, was introduced in Mamba2 to enhance model performance and efficiency. 
+However, the inherent causal nature of SSD/SSMs restricts their applications in non-causal vision tasks. 
+To address this limitation, we introduce Visual State Space Duality (VSSD) model, which has a non-causal format of SSD.
 This repository contains the code for training and evaluating VSSD varints on the ImageNet-1K dataset for image classification, COCO dataset for object detection, and ADE20K dataset for semantic segmentation.
 
 [//]: # (For more information, please refer to our [paper])
