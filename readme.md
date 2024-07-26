@@ -71,13 +71,12 @@ conda create -n VSSD
 conda activate VSSD
 ```
 
-[//]: # (***Install Dependencies***)
+***Install Dependencies***
 
-[//]: # ()
-[//]: # (```bash)
 
-[//]: # (pip install -r requirements.txt)
-
+```bash
+pip install -r requirements.txt
+```
 [//]: # (cd kernels/selective_scan && pip install .)
 
 [//]: # (```)
