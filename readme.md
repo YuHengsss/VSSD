@@ -1,7 +1,7 @@
 
 <div align="center">
 <h1>VSSD </h1>
-<h3>VSSD:  Vision Mamba with Non-Casual State Space Duality</h3>
+<h3>VSSD:  Vision Mamba with Non-Causal State Space Duality</h3>
 
 Paper: ([arXiv:2407.18559](https://arxiv.org/abs/2407.18559))
 </div>
