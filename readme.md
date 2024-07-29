@@ -33,7 +33,7 @@ For more information, please refer to our [paper](https://arxiv.org/abs/2407.185
 | VSSD-Small | ImageNet-1K | 224x224 |   84.1   |   40M   | 7.4G  |                                              [log&ckpt](https://drive.google.com/drive/folders/1uXSfgD7A4ZVHRqcFFS7OQhbXIzVkoxB9?usp=drive_link)                                              | 
 | VSSD-Base  | ImageNet-1K | 224x224 | **84.7** |   89M   | 16.1G |                                              [log&ckpt](https://drive.google.com/drive/folders/18KDn-jIi3NKnZ6e7Gd0-luEbbqQ1Q_6G?usp=drive_link)                                              | 
 
-**Enhanced model with MESA:**
+**Enhanced model with [MESA](https://github.com/YuHengsss/VSSD/blob/1a430bda2910affef8fc42ab9d581b742a0810ce/classification/main.py#L314):**
 
 |    name    | pretrain | resolution |  acc@1   | #params | FLOPs |                                             logs&ckpts                                              | 
 |:----------:| :---: | :---: |:--------:|:-------:|:-----:|:---------------------------------------------------------------------------------------------------:|
