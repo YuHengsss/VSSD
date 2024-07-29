@@ -2,9 +2,8 @@
 <div align="center">
 <h1>VSSD </h1>
 <h3>VSSD:  Vision Mamba with Non-Casual State Space Duality</h3>
-Paper is coming soon!
 
-[//]: # (Paper: &#40;[arXiv:2405.14174]&#40;https://arxiv.org/abs/2405.14174&#41;&#41;)
+Paper: ([arXiv:2407.18559](https://arxiv.org/abs/2407.18559))
 </div>
 
 ## Updates
@@ -16,9 +15,7 @@ Recently, State Space Duality (SSD), an improved variant of SSMs, was introduced
 However, the inherent causal nature of SSD/SSMs restricts their applications in non-causal vision tasks. 
 To address this limitation, we introduce Visual State Space Duality (VSSD) model, which has a non-causal format of SSD.
 This repository contains the code for training and evaluating VSSD varints on the ImageNet-1K dataset for image classification, COCO dataset for object detection, and ADE20K dataset for semantic segmentation.
-
-[//]: # (For more information, please refer to our [paper])
-[//]: # (&#40;https://arxiv.org/abs/2405.14174&#41;.)
+For more information, please refer to our [paper](https://arxiv.org/abs/2407.18559).
 
 <p align="center">
   <img src="./assets/overall_arc.jpg" width="800" />
@@ -131,25 +128,18 @@ bash ./tools/dist_train.sh </path/to/config> 8
 ```
 
 
-[//]: # (## Citation)
+## Citation
 
-[//]: # (If VSSD is helpful for your research, please cite the following paper:)
+If VSSD is helpful for your research, please cite the following paper:
 
-[//]: # (```)
-
-[//]: # (@article{shi2024multiscale,)
-
-[//]: # (      title={Multi-Scale VMamba: Hierarchy in Hierarchy Visual State Space Model}, )
-
-[//]: # (      author={Yuheng Shi and Minjing Dong and Chang Xu},)
-
-[//]: # (      journal={arXiv preprint arXiv:2405.14174},)
-
-[//]: # (      year={2024})
-
-[//]: # (})
-
-[//]: # (```)
+```
+@article{shi2024vssd,
+         title={VSSD: Vision Mamba with Non-Casual State Space Duality}, 
+         author={Yuheng Shi and Minjing Dong and Mingjia Li and Chang Xu},
+         journal={arXiv preprint arXiv:2407.18559},
+         year={2024}
+}
+```
 
 ## Acknowledgment
 
