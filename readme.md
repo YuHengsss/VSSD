@@ -7,6 +7,7 @@ Paper: ([arXiv:2407.18559](https://arxiv.org/abs/2407.18559))
 </div>
 
 ## Updates
+* **` July. 29th, 2024`**: When introduce [MESA](https://arxiv.org/abs/2205.14083) in training as [MLLA](https://github.com/LeapLabTHU/MLLA), VSSD-B achieve 85.4% top-1 acc on ImageNet-1K !
 * **` July. 25th, 2024`**: We release the code, log and ckpt for VSSD
 
 
@@ -25,12 +26,19 @@ For more information, please refer to our [paper](https://arxiv.org/abs/2407.185
 
 ### **Classification on ImageNet-1K**
 
-|    name    | pretrain | resolution | acc@1 | #params | FLOPs |                                               logs&ckpts                                                | 
-|:----------:| :---: | :---: |:-----:|:-------:|:-----:|:-------------------------------------------------------------------------------------------------------:| 
-| VSSD-Micro | ImageNet-1K | 224x224 | 82.5  |   14M   | 2.3G  |   [log&ckpt](https://drive.google.com/drive/folders/1XWqLj4neH-MGktIe35l1orVUrKr6ry5V?usp=drive_link)   |
-| VSSD-Tiny  | ImageNet-1K | 224x224 | 83.6  |   24M   | 4.5G  |                                              [log&ckpt](https://drive.google.com/drive/folders/1fguht9zoIBmS1WD9prqzYHD0APPG16Ub?usp=drive_link)                                              | 
-| VSSD-Small | ImageNet-1K | 224x224 | 84.1  |   40M   | 7.4G  |                                              [log&ckpt](https://drive.google.com/drive/folders/1uXSfgD7A4ZVHRqcFFS7OQhbXIzVkoxB9?usp=drive_link)                                              | 
-| VSSD-Base  | ImageNet-1K | 224x224 | 84.7  |   89M   | 16.1G |                                              [log&ckpt](https://drive.google.com/drive/folders/18KDn-jIi3NKnZ6e7Gd0-luEbbqQ1Q_6G?usp=drive_link)                                              | 
+|    name    | pretrain | resolution |  acc@1   | #params | FLOPs |                                               logs&ckpts                                                | 
+|:----------:| :---: | :---: |:--------:|:-------:|:-----:|:-------------------------------------------------------------------------------------------------------:| 
+| VSSD-Micro | ImageNet-1K | 224x224 |   82.5   |   14M   | 2.3G  |   [log&ckpt](https://drive.google.com/drive/folders/1XWqLj4neH-MGktIe35l1orVUrKr6ry5V?usp=drive_link)   |
+| VSSD-Tiny  | ImageNet-1K | 224x224 |   83.6   |   24M   | 4.5G  |                                              [log&ckpt](https://drive.google.com/drive/folders/1fguht9zoIBmS1WD9prqzYHD0APPG16Ub?usp=drive_link)                                              | 
+| VSSD-Small | ImageNet-1K | 224x224 |   84.1   |   40M   | 7.4G  |                                              [log&ckpt](https://drive.google.com/drive/folders/1uXSfgD7A4ZVHRqcFFS7OQhbXIzVkoxB9?usp=drive_link)                                              | 
+| VSSD-Base  | ImageNet-1K | 224x224 | **84.7** |   89M   | 16.1G |                                              [log&ckpt](https://drive.google.com/drive/folders/18KDn-jIi3NKnZ6e7Gd0-luEbbqQ1Q_6G?usp=drive_link)                                              | 
+
+**Enhanced model with MESA:**
+
+|    name    | pretrain | resolution |  acc@1   | #params | FLOPs |                                             logs&ckpts                                              | 
+|:----------:| :---: | :---: |:--------:|:-------:|:-----:|:---------------------------------------------------------------------------------------------------:|
+| VSSD-Small | ImageNet-1K | 224x224 |   84.5   |   40M   | 7.4G  |                                               coming                                                | 
+| VSSD-Base  | ImageNet-1K | 224x224 | **85.4** |   89M   | 16.1G | coming | 
 
 ### **Object Detection on COCO**
   
