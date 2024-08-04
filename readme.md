@@ -37,6 +37,7 @@ For more information, please refer to our [paper](https://arxiv.org/abs/2407.185
 
 |    name    | pretrain | resolution |  acc@1   | #params | FLOPs |                                             logs&ckpts                                              | 
 |:----------:| :---: | :---: |:--------:|:-------:|:-----:|:---------------------------------------------------------------------------------------------------:|
+| VSSD-Tiny | ImageNet-1K | 224x224 |   84.1   |   24M   | 4.5G  |                                               coming                                                | 
 | VSSD-Small | ImageNet-1K | 224x224 |   84.5   |   40M   | 7.4G  |                                               coming                                                | 
 | VSSD-Base  | ImageNet-1K | 224x224 | **85.4** |   89M   | 16.1G | coming | 
 
