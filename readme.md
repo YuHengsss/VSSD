@@ -144,7 +144,7 @@ If VSSD is helpful for your research, please cite the following paper:
 
 ```
 @article{shi2024vssd,
-         title={VSSD: Vision Mamba with Non-Casual State Space Duality}, 
+         title={VSSD: Vision Mamba with Non-Causal State Space Duality}, 
          author={Yuheng Shi and Minjing Dong and Mingjia Li and Chang Xu},
          journal={arXiv preprint arXiv:2407.18559},
          year={2024}
