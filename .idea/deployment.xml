@@ -13,6 +13,13 @@
           </excludedPaths>
         </serverdata>
       </paths>
+      <paths name="autodl">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/vssd_release" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="debug server">
         <serverdata>
           <mappings>
@@ -59,13 +66,6 @@
         <serverdata>
           <mappings>
             <mapping deploy="/home/li/yh/hfai/msvmamba" local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="root@connect.westc.gpuhub.com:44450 password">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/home/vssd_release" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
