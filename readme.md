@@ -51,7 +51,7 @@ For more information, please refer to our [paper](https://arxiv.org/abs/2407.185
 | VSSD-Small |   59M   | 325G  | MaskRCNN@1x |  48.4   |   43.5   | [log](https://drive.google.com/drive/folders/1aBSa3hbHs7snNcQG_YY392GF9gINA2Io?usp=drive_link) |[ckpt](https://huggingface.co/YuhengSSS/VSSD/blob/main/mask_rcnn_vssd_fpn_coco_small.pth)|
 | VSSD-Micro |   33M   | 220G  | MaskRCNN@3x |  47.7   |   42.8   | [log](https://drive.google.com/drive/folders/1JIPfOIpYcKFbyeItiZBg5W2eXOzXXyXu?usp=drive_link) |[ckpt](https://huggingface.co/YuhengSSS/VSSD/blob/main/mask_rcnn_vssd_fpn_coco_micro_3x.pth)|
 | VSSD-Tiny  |   44M   | 265G  | MaskRCNN@3x |  48.8   |   43.6   | [log](https://drive.google.com/drive/folders/1ft17N0xme0gVmne6FISOoRZSuSWF42VF?usp=drive_link) |[ckpt](https://huggingface.co/YuhengSSS/VSSD/blob/main/mask_rcnn_vssd_fpn_coco_tiny_3x.pth)|
-| VSSD-Small |   59M   | 325G  | MaskRCNN@3x |  50.0   |   46.6   |                                               -                                                |[ckpt](https://huggingface.co/YuhengSSS/VSSD/blob/main/mask_rcnn_vssd_fpn_coco_small.pth)|
+| VSSD-Small |   59M   | 325G  | MaskRCNN@3x |  50.0   |   44.6   |                                               -                                                |[ckpt](https://huggingface.co/YuhengSSS/VSSD/blob/main/mask_rcnn_vssd_fpn_coco_small.pth)|
 
 
 ### **Semantic Segmentation on ADE20K**
